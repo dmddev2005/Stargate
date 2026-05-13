@@ -1,1 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stargate Consulting | AI-Driven Operations & Global Strategy</title>
+  <meta name="description" content="Stargate Consulting helps companies scale smarter with AI-driven cost optimization, global sourcing strategy, and operational transformation." />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1022;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #f8fafc;
+      --muted: #a7b0c0;
+      --blue: #4f8cff;
+      --cyan: #46e6ff;
+      --gold: #f8c96b;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(79, 140, 255, 0.26), transparent 34rem),
+        radial-gradient(circle at 80% 10%, rgba(70, 230, 255, 0.14), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 8, 22, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 1.12rem;
+    }
+
+    .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 28px rgba(79, 140, 255, 0.55);
+      font-weight: 900;
+      color: #061124;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      color: #061124;
+      box-shadow: 0 18px 48px rgba(79, 140, 255, 0.34);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 104px 0 78px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #dbeafe;
+      background: rgba(79, 140, 255, 0.12);
+      border: 1px solid rgba(79, 140, 255, 0.28);
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      margin-bottom: 24px;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 7px rgba(70, 230, 255, 0.13);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.9rem);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff, #9bd7ff 45%, var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.18rem;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 660px;
+    }
+
+    .trust-item {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.045);
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    .orb-card {
+      position: relative;
+      min-height: 520px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 34px;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.42);
+      overflow: hidden;
+      padding: 28px;
+    }
+
+    .orb-card::before {
+      content: "";
+      position: absolute;
+      inset: -35%;
+      background: conic-gradient(from 130deg, transparent, rgba(70, 230, 255, 0.35), rgba(79, 140, 255, 0.3), transparent 55%);
+      animation: spin 14s linear infinite;
+      opacity: 0.7;
+    }
+
+    .orb-card::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: 33px;
+      background: rgba(7, 12, 28, 0.86);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .dashboard {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 18px;
+    }
+
+    .dash-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .dash-label {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .status {
+      color: #bbf7d0;
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.24);
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+    }
+
+    .metric-card {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.065);
+      border-radius: 24px;
+      padding: 22px;
+    }
+
+    .metric-card.big {
+      padding: 28px;
+    }
+
+    .metric {
+      font-size: 2.6rem;
+      font-weight: 850;
+      letter-spacing: -0.06em;
+      margin: 8px 0 4px;
+    }
+
+    .bar {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.11);
+      overflow: hidden;
+      margin-top: 16px;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      width: 74%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-kicker {
+      color: var(--cyan);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      border: 1px solid var(--card-border);
+      background: var(--card);
+      border-radius: 28px;
+      padding: 28px;
+      min-height: 260px;
+      transition: transform 0.22s ease, background 0.22s ease, border 0.22s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.085);
+      border-color: rgba(70, 230, 255, 0.26);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(79, 140, 255, 0.14);
+      color: var(--cyan);
+      font-size: 1.35rem;
+      margin-bottom: 24px;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .card li::before {
+      content: "→";
+      color: var(--cyan);
+      margin-right: 8px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .num {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(79, 140, 255, 0.28), rgba(70, 230, 255, 0.16));
+      color: var(--text);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin-bottom: 5px;
+      letter-spacing: -0.02em;
+    }
+
+    .step p {
+      color: var(--muted);
+    }
+
+    .cta {
+      padding: 92px 0;
+    }
+
+    .cta-box {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background:
+        radial-gradient(circle at top right, rgba(70, 230, 255, 0.2), transparent 24rem),
+        linear-gradient(135deg, rgba(79, 140, 255, 0.16), rgba(255, 255, 255, 0.05));
+      border-radius: 36px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 28px;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+    }
+
+    .cta-box p {
+      color: var(--muted);
+      max-width: 640px;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 36px 0;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links { display: none; }
+      .hero-grid, .process, .cta-box { grid-template-columns: 1fr; }
+      .orb-card { min-height: auto; }
+      .cards { grid-template-columns: 1fr; }
+      .trust-row { grid-template-columns: 1fr; }
+      .hero { padding-top: 72px; }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(100% - 28px, var(--max)); }
+      .hero-actions, .btn { width: 100%; }
+      .mini-grid { grid-template-columns: 1fr; }
+      .cta-box { padding: 30px; }
+      h1 { font-size: 3.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Stargate Consulting home">
+        <span class="mark">S</span>
+        <span>Stargate Consulting</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#results">Results</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="mailto:info@stargate.us.com">Book a Consultation</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="pulse"></span> AI • Operations • Global Scale</div>
+          <h1>Scale smarter with <span class="gradient-text">AI-driven operations</span> and global strategy.</h1>
+          <p>
+            Stargate Consulting helps startups, SMBs, mid-market companies, and enterprises restructure operations, reduce COGS, optimize sourcing, and build scalable global business models.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:info@stargate.us.com?subject=Free%20Strategy%20Consultation">Book a Free Consultation</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+          <div class="trust-row" aria-label="Business focus areas">
+            <div class="trust-item"><strong>AI Optimization</strong> Automate, simplify, reduce waste</div>
+            <div class="trust-item"><strong>Global Sourcing</strong> Right labor mix, right model</div>
+            <div class="trust-item"><strong>Operational Growth</strong> Scale from local to global</div>
+          </div>
+        </div>
+
+        <aside class="orb-card" aria-label="Transformation dashboard illustration">
+          <div class="dashboard">
+            <div class="dash-top">
+              <div>
+                <div class="dash-label">Transformation Dashboard</div>
+                <strong>Operating Model Review</strong>
+              </div>
+              <span class="status">Active</span>
+            </div>
+
+            <div class="metric-card big">
+              <div class="dash-label">Optimization potential</div>
+              <div class="metric">28%</div>
+              <div class="dash-label">Estimated efficiency opportunity across process, labor mix, and automation.</div>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="mini-grid">
+              <div class="metric-card">
+                <div class="dash-label">COGS Focus</div>
+                <div class="metric">↓</div>
+                <div class="dash-label">Cost structure redesign</div>
+              </div>
+              <div class="metric-card">
+                <div class="dash-label">Scale Model</div>
+                <div class="metric">↗</div>
+                <div class="dash-label">Local to global readiness</div>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="dash-label">Priority workstreams</div>
+              <ul style="list-style:none; margin-top:12px; display:grid; gap:10px; color:#dbeafe;">
+                <li>• AI-enabled workflow automation</li>
+                <li>• Outsourcing and customer success strategy</li>
+                <li>• Supply chain and revenue model optimization</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">What We Do</div>
+          <h2>Transform how your business operates, sources, and scales.</h2>
+          <p>We combine executive strategy, AI transformation, sourcing design, and operational discipline to help companies grow without unnecessary complexity or cost.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">✦</div>
+            <h3>AI-Driven Cost Optimization</h3>
+            <p>Restructure workflows, reduce manual effort, improve lifecycle efficiency, and identify practical AI opportunities that lower operating costs.</p>
+            <ul>
+              <li>COGS reduction strategy</li>
+              <li>Automation roadmap</li>
+              <li>Self-help and support deflection</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">◈</div>
+            <h3>Global Sourcing Strategy</h3>
+            <p>Design the right operating model across outsourcing, labor mix, customer success, vendor ecosystems, and geographic expansion.</p>
+            <ul>
+              <li>Outsourcing strategy</li>
+              <li>Onshore/offshore labor mix</li>
+              <li>Customer success model design</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">◎</div>
+            <h3>Operational Scale & Growth</h3>
+            <p>Optimize supply chain, revenue motion, employee experience, and execution systems so your company can scale with confidence.</p>
+            <ul>
+              <li>Supply chain optimization</li>
+              <li>Business model redesign</li>
+              <li>Employee satisfaction improvement</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="container process">
+        <div class="section-header">
+          <div class="section-kicker">Our Approach</div>
+          <h2>Strategy that moves from insight to execution.</h2>
+          <p>We focus on measurable business outcomes: lower costs, stronger operating rhythm, improved customer experience, and scalable growth.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="num">01</div>
+            <div>
+              <h3>Diagnose</h3>
+              <p>Assess current operations, cost structure, workflows, sourcing model, and growth constraints.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">02</div>
+            <div>
+              <h3>Design</h3>
+              <p>Create a practical transformation roadmap across AI, labor mix, process redesign, and global operations.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">03</div>
+            <div>
+              <h3>Implement</h3>
+              <p>Support execution with clear priorities, vendor strategy, customer success workflows, and operating metrics.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">04</div>
+            <div>
+              <h3>Measure</h3>
+              <p>Track savings, efficiency gains, revenue impact, employee experience, and readiness for global scale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Business Outcomes</div>
+          <h2>Built for leaders who need clarity, speed, and measurable impact.</h2>
+          <p>Whether you are moving from startup to scale-up, modernizing an SMB, or transforming enterprise operations, Stargate helps connect strategy with execution.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">↓</div>
+            <h3>Lower Cost Structure</h3>
+            <p>Find practical ways to reduce COGS and operating waste without damaging quality, customer experience, or team morale.</p>
+          </article>
+          <article class="card">
+            <div class="icon">↗</div>
+            <h3>Scalable Operating Model</h3>
+            <p>Build processes, sourcing models, and support systems that can grow from local operations into global execution.</p>
+          </article>
+          <article class="card">
+            <div class="icon">✓</div>
+            <h3>Better Customer & Employee Experience</h3>
+            <p>Improve customer success, self-service, internal workflows, and employee satisfaction through smarter operational design.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <div class="section-kicker">Start the Conversation</div>
+            <h2>Ready to optimize your business for the AI era?</h2>
+            <p>Let’s identify where your organization can reduce cost, improve execution, and scale with a stronger operating model.</p>
+          </div>
+          <a class="btn btn-primary" href="mailto:info@stargate.us.com?subject=Free%20Strategy%20Consultation">Book a Free Consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Stargate Consulting. Bellevue, Washington.</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="mailto:info@stargate.us.com">info@stargate.us.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
 
