@@ -411,11 +411,7 @@ p {
   gap: 1.5rem 2rem;
   margin-top: 2.2rem;
 }
-.hero-actions .button {
-  width: auto;
-  min-width: 220px;
-  padding-inline: 1.25rem;
-}
+
 .hero-visual {
   position: relative;
   min-height: 520px;
@@ -1065,48 +1061,403 @@ p {
     justify-items: start;
   }
 }
-/* Mobile and tablet hero refinement */
+
+
+/* =========================================================
+   Interior pages: Practices and AI Strategy & Adoption
+   ========================================================= */
+
+.primary-navigation a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.practice h3 a {
+  color: inherit;
+}
+
+.practice h3 a:hover {
+  color: var(--blue);
+}
+
+.interior-hero,
+.practice-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(6.5rem, 11vw, 10rem);
+  padding-bottom: clamp(5.5rem, 9vw, 8rem);
+  background:
+    radial-gradient(circle at 82% 28%, rgba(35, 79, 120, 0.09), transparent 28%),
+    linear-gradient(110deg, var(--paper) 0%, var(--paper) 58%, #f3f6f8 100%);
+}
+
+.interior-hero::after,
+.practice-hero::after {
+  position: absolute;
+  right: -180px;
+  bottom: -340px;
+  width: 680px;
+  height: 680px;
+  border: 1px solid rgba(35, 79, 120, 0.09);
+  border-radius: 50%;
+  content: "";
+}
+
+.interior-hero-grid,
+.practice-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: end;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: 1.06fr 0.94fr;
+}
+
+.interior-hero h1,
+.practice-hero h1 {
+  max-width: 830px;
+  margin-bottom: 0;
+  font-size: clamp(4rem, 7vw, 6.8rem);
+}
+
+.interior-hero-copy,
+.practice-hero-copy {
+  max-width: 600px;
+  padding-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.interior-lead {
+  color: var(--ink-deep);
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.1vw, 1.9rem);
+  line-height: 1.35;
+}
+
+.practice-hero-copy .button {
+  margin-top: 1rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.back-link:hover {
+  color: var(--ink);
+}
+
+.split-copy {
+  display: grid;
+  align-items: start;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: 1fr 0.9fr;
+}
+
+.split-copy > div:last-child {
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.split-copy .emphasis {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.practice-page-grid {
+  display: grid;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.practice-page-card {
+  min-height: 470px;
+  display: grid;
+  gap: 2rem;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  grid-template-columns: auto 1fr;
+}
+
+.practice-page-card-featured {
+  background: var(--white);
+}
+
+.practice-page-card .practice-index {
+  margin: 0;
+}
+
+.practice-page-card h3 {
+  font-size: clamp(1.8rem, 2.6vw, 2.45rem);
+}
+
+.practice-page-card p {
+  color: var(--muted);
+}
+
+.plain-list {
+  padding: 0;
+  margin: 1.75rem 0 2rem;
+  list-style: none;
+}
+
+.plain-list li {
+  position: relative;
+  padding: 0.65rem 0 0.65rem 1.15rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+}
+
+.plain-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.plain-list li::before {
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 50%;
+  content: "";
+}
+
+.status-link {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.three-column-points,
+.approach-grid {
+  display: grid;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.three-column-points article,
+.approach-grid article {
+  min-height: 300px;
+  padding: 2.25rem;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.point-number {
+  display: block;
+  margin-bottom: 3.5rem;
+  color: var(--blue);
+  font-family: var(--serif);
+}
+
+.three-column-points p,
+.approach-grid p {
+  color: var(--muted);
+}
+
+.statement-band {
+  background: var(--ink-deep);
+  color: var(--white);
+}
+
+.statement-band-grid {
+  display: grid;
+  gap: clamp(2rem, 7vw, 7rem);
+  grid-template-columns: 0.35fr 1.65fr;
+}
+
+.statement-band blockquote {
+  max-width: 920px;
+  margin: 0;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 4.4vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.question-grid {
+  display: grid;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.question-item {
+  min-height: 330px;
+  padding: 2.25rem;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.question-item > span {
+  display: block;
+  margin-bottom: 3rem;
+  color: var(--blue);
+  font-family: var(--serif);
+}
+
+.question-item p {
+  color: var(--muted);
+}
+
+.focus-layout {
+  display: grid;
+  align-items: start;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: 0.72fr 1.28fr;
+}
+
+.focus-heading {
+  position: sticky;
+  top: 130px;
+}
+
+.focus-heading p:last-child {
+  max-width: 470px;
+  color: var(--muted);
+}
+
+.focus-list {
+  border-top: 1px solid var(--rule);
+}
+
+.focus-row {
+  display: grid;
+  gap: 2rem;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--rule);
+  grid-template-columns: auto 1fr;
+}
+
+.focus-number {
+  color: var(--blue);
+  font-family: var(--serif);
+}
+
+.focus-row h3 {
+  margin-bottom: 0.5rem;
+}
+
+.focus-row p {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.approach-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.approach-grid article {
+  min-height: 340px;
+}
+
+.outcome-list {
+  border-top: 1px solid var(--rule);
+}
+
+.outcome-list p {
+  position: relative;
+  padding: 1rem 0 1rem 1.5rem;
+  margin: 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft);
+}
+
+.outcome-list p::before {
+  position: absolute;
+  top: 1.65rem;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  content: "";
+}
+
+@media (max-width: 960px) {
+  .practice-page-grid,
+  .question-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-heading {
+    position: static;
+  }
+}
+
 @media (max-width: 860px) {
-  .hero {
+  .interior-hero-grid,
+  .practice-hero-grid,
+  .split-copy,
+  .statement-band-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interior-hero,
+  .practice-hero {
+    padding-top: 5.5rem;
+  }
+
+  .interior-hero-copy,
+  .practice-hero-copy {
+    padding-bottom: 0;
+  }
+
+  .three-column-points {
+    grid-template-columns: 1fr;
+  }
+
+  .three-column-points article {
     min-height: auto;
-    overflow: hidden;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .interior-hero h1,
+  .practice-hero h1 {
+    font-size: clamp(3.5rem, 16vw, 4.7rem);
   }
 
-  .hero::before {
-    background:
-      radial-gradient(
-        circle at 50% 76%,
-        rgba(35, 79, 120, 0.055),
-        transparent 38%
-      ),
-      var(--paper);
+  .practice-page-grid,
+  .question-grid,
+  .approach-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero-grid {
-    gap: 1.5rem;
+  .practice-page-card {
+    min-height: auto;
+    padding: 2rem 1.5rem;
   }
 
-  .hero-visual {
-    min-height: 0;
-    height: auto;
-    margin-top: 0;
+  .question-item,
+  .approach-grid article {
+    min-height: auto;
   }
 
-  .hero-visual::after {
-    width: 240px;
-    height: 240px;
-  }
-
-  .systems-graphic {
-    width: min(100%, 360px);
-    margin-inline: auto;
-  }
-
-  .hero-actions .button {
-    width: auto;
-    min-width: 220px;
-    padding-inline: 1.25rem;
+  .statement-band blockquote {
+    font-size: clamp(2.2rem, 11vw, 3rem);
   }
 }
