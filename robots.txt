@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stargate.us.com/sitemap.xml
